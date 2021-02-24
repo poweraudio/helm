@@ -25,7 +25,11 @@ else
 ifneq (,$(findstring arm,$(MACHINE)))
 	SIMDFLAGS := -march=armv8-a -mtune=cortex-a53 -mfpu=neon-fp-armv8 -mfloat-abi=hard
 else
+ifneq (,$(findstring ppc,$(MACHINE)))
+	SIMDFLAGS :=
+else
 	SIMDFLAGS := -msse2
+endif
 endif
 endif
 
