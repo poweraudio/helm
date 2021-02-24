@@ -3,7 +3,7 @@ ifndef CONFIG
 endif
 
 ifndef LIBDIR
-	LIBDIR=/usr/lib/
+	LIBDIR=/usr/local/lib/
 endif
 
 DPKG := $(shell dpkg-buildflags --version 2> /dev/null)
@@ -34,19 +34,19 @@ endif
 endif
 
 PROGRAM = helm
-BIN     = $(DESTDIR)/usr/bin
+BIN     = $(DESTDIR)/usr/local/bin
 BINFILE = $(BIN)/$(PROGRAM)
 LV2     = $(DESTDIR)/$(LIBDIR)/lv2/$(PROGRAM).lv2
 VSTDIR  = $(DESTDIR)/$(LIBDIR)/lxvst
 VST     = $(VSTDIR)/$(PROGRAM).so
-SYSDATA = $(DESTDIR)/usr/share/$(PROGRAM)
+SYSDATA = $(DESTDIR)/usr/local/share/$(PROGRAM)
 IMAGES  = $(SYSDATA)/icons
 PATCHES = $(SYSDATA)/patches
-MAN     = $(DESTDIR)/usr/share/man/man1/
-CHANGES = $(DESTDIR)/usr/share/doc/$(PROGRAM)/
-DESKTOP = $(DESTDIR)/usr/share/applications/
+MAN     = $(DESTDIR)/usr/local/share/man/man1/
+CHANGES = $(DESTDIR)/usr/local/share/doc/$(PROGRAM)/
+DESKTOP = $(DESTDIR)/usr/local/share/applications/
 
-ICONS   = $(DESTDIR)/usr/share/icons/hicolor/
+ICONS   = $(DESTDIR)/usr/local/share/icons/hicolor/
 ICON16  = images/helm_icon_16_1x.png
 ICON22  = images/helm_icon_22_1x.png
 ICON24  = images/helm_icon_24_1x.png
