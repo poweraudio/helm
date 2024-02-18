@@ -1,3 +1,13 @@
+**PowerAudio fork of Helm**
+
+This fork of Helm has the following changes:
+
+* Fixed compilation errors with certain GCC versions.
+* Added support for IBM Power in build files.
+* Changed default installation destination to /usr/local.
+
+---
+
 ## Helm
 Helm is a free, cross-platform, polyphonic synthesizer that runs on GNU/Linux, Mac, and Windows as a standalone program and as a LV2/VST/AU/AAX plugin. Release is in beta so there are outstanding bugs. Please send any bugs found to matthewtytel@gmail.com
 
