@@ -5,6 +5,7 @@ This fork of Helm has the following changes:
 * Fixed compilation errors with certain GCC versions.
 * Added support for IBM Power in build files.
 * Changed default installation destination to /usr/local.
+* Fixed issue where binaries were re-linked on every call to `make`.
 
 ---
 
